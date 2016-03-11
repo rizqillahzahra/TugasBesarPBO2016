@@ -12,4 +12,5 @@ package tugasbesarpbo2016;
 public abstract class Orang {
     String nama;
     long no_telp;
+    //tes
 }
