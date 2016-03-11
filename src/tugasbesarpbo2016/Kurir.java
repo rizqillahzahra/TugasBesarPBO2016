@@ -9,16 +9,19 @@ package tugasbesarpbo2016;
  *
  * @author Hafidh Fikri Rasyid
  */
-public class Kurir extends Orang {
-    private Pesanan pesanan[];
-    private int jml_pesanan;
+public class Kurir extends Pesanan {
+    private String nama_barang;
     
-    public void createPesanan(){
-        pesanan[jml_pesanan] = new Pesanan();
-        jml_pesanan++;
+    public Kurir(String alamat_tujuan, String status, String nama_barang) {
+        super(alamat_tujuan, status);
+        this.nama_barang = nama_barang;
     }
-    
-    public Pesanan getPesanan(int index){
-        return pesanan[index];
+
+    public String getNama_barang() {
+        return nama_barang;
+    }
+
+    public void setNama_barang(String nama_barang) {
+        this.nama_barang = nama_barang;
     }
 }
