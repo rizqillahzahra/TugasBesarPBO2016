@@ -78,5 +78,4 @@ public class Pengemudi extends Orang{
             }
             return false;
         }
-
 }

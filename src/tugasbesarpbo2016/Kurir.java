@@ -11,7 +11,6 @@ package tugasbesarpbo2016;
  */
 public class Kurir extends Pesanan {
     private String nama_barang;
-    
     public Kurir(String alamat_tujuan, String status, String nama_barang, long id_pesanan) {
         super(alamat_tujuan, status,id_pesanan);
         this.nama_barang = nama_barang;
