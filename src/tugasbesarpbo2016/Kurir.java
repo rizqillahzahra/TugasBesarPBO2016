@@ -23,4 +23,12 @@ public class Kurir extends Pesanan {
     public void setNama_barang(String nama_barang) {
         this.nama_barang = nama_barang;
     }
+    
+    public String toString(){
+        String x = "\nID Pesanan : "+this.getId_pesanan()+
+                "\nNama Barang : "+this.getNama_barang()+
+                "\nAlamat Tujuan : "+this.getAlamat_tujuan()+
+                "\nStatus :"+this.getStatus();
+        return x;
+    }
 }

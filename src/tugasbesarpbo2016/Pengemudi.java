@@ -14,10 +14,12 @@ public class Pengemudi extends Orang{
     private Pesanan[] pesanan = new Pesanan[100];
     private int i;
 
-    public Pengemudi(String nama, long no_telp, long id_pengemudi)
+    public Pengemudi(String nama, long no_telp, long id_pengemudi,String username,String password)
     {
         super.setNama(nama);
         super.setNo_telp(no_telp);
+        super.setPassword(password);
+        super.setUsername(username);
         this.id_pengemudi = id_pengemudi;
     }
 
@@ -81,5 +83,12 @@ public class Pengemudi extends Orang{
 
     public long getId_pengemudi() {
         return id_pengemudi;
+    }
+    
+    public String toString(){
+        String x = "\nID Pengemudi : "+this.getId_pengemudi()+
+                "\nNama : "+this.getNama()+
+                "\nNo Telp : "+this.getNo_telp();
+        return x;
     }
 }
