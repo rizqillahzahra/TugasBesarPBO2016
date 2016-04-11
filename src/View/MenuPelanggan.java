@@ -34,8 +34,10 @@ public class MenuPelanggan extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        CourierButton.setFont(new java.awt.Font("Hobo Std", 0, 11)); // NOI18N
         CourierButton.setText("Courier");
 
+        PickUpButton.setFont(new java.awt.Font("Hobo Std", 0, 11)); // NOI18N
         PickUpButton.setText("Pick Up");
         PickUpButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -43,9 +45,10 @@ public class MenuPelanggan extends javax.swing.JFrame {
             }
         });
 
+        LogOutButton.setFont(new java.awt.Font("Hobo Std", 0, 11)); // NOI18N
         LogOutButton.setText("Log Out");
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Hobo Std", 0, 24)); // NOI18N
         jLabel1.setText("TRANSPORTASI ONLINE");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -65,14 +68,14 @@ public class MenuPelanggan extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(158, 158, 158)
                         .addComponent(LogOutButton)))
-                .addContainerGap(72, Short.MAX_VALUE))
+                .addContainerGap(54, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 49, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 55, Short.MAX_VALUE)
                 .addComponent(PickUpButton, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(CourierButton, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
