@@ -76,4 +76,13 @@ public class Pesanan {
     public void setJarak(int jarak) {
         this.jarak = jarak;
     }
+    
+    public String toString(){
+        String x = "\nID Pesanan : "+this.getId_pesanan()+
+                "\nAlamat Tujuan : "+this.getAlamat_tujuan()+
+                "\nStatus : "+this.getStatus()+
+                "\nJarak : "+this.getJarak()+
+                "\nTarif :"+ this.getTarif();
+        return x;
+    }
 }

@@ -5,20 +5,14 @@
  */
 package tugasbesarpbo2016;
 
-import Model.Koneksi;
-
 /**
  *
  * @author Hafidh Fikri Rasyid
  */
-public class TugasBesarPBO2016 {
-
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        //Koneksi conn = new Koneksi();
-        //conn.bikinKoneksi();
-    }
+public class Driver {
     
+    public static void main(String[] args) throws Exception {
+        Console con = new Console();
+        con.MainMenu();
+    }
 }
