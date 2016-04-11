@@ -5,6 +5,8 @@
  */
 package tugasbesarpbo2016;
 
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -23,15 +25,24 @@ public class Console {
     final String process = "Sedang Diproses";
     final String finish = "Selesai";
     final String kembali = "Tidak Ditemukan";
+    final String file_pelanggan = "data_pelanggan.dat";
+    final String file_pengemudi = "data_pengemudi.dat";
+    Serial serial;
        
-    public void addPelanggan(String nama, long no_telp, String alamat_pelanggan, long id_pelanggan,String username,String password){
+    public void addPelanggan(String nama, long no_telp, String alamat_pelanggan, long id_pelanggan,String username,String password) throws IOException{
         Pelanggan tmp_pelanggan = new Pelanggan(nama,no_telp,alamat_pelanggan,id_pelanggan,username,password);
         daftarPelanggan.add(tmp_pelanggan);
+        
+        serial = new Serial(file_pelanggan);
+        serial.writeObject(daftarPelanggan);
     }
     
-    public void addPengemudi(String nama, long no_telp, long id_pengemudi,String username,String password){
+    public void addPengemudi(String nama, long no_telp, long id_pengemudi,String username,String password) throws IOException{
         Pengemudi tmp_pengemudi = new Pengemudi(nama,no_telp,id_pengemudi,username,password);
         daftarPengemudi.add(tmp_pengemudi);
+        
+        serial = new Serial(file_pengemudi);
+        serial.writeObject(daftarPengemudi);
     }
     
     public Pengemudi getPengemudi(long idPengemudi){
@@ -153,7 +164,7 @@ public class Console {
         daftarPesanan.add(tmpKurir);
     }
     
-    public void tambahPelanggan(){
+    public void tambahPelanggan() throws Exception{
         String nama,alamat_pelanggan, username,password;
         long no_telp,id_pelanggan;
         
@@ -174,7 +185,7 @@ public class Console {
         addPelanggan(nama, no_telp, alamat_pelanggan, id_pelanggan, username, password);
     }
     
-    public void tambahPengemudi(){
+    public void tambahPengemudi() throws Exception{
         String nama,username,password;
         long no_telp,id_pengemudi;
         
@@ -258,7 +269,19 @@ public class Console {
         }
     }
     
-    public void MainMenu() {
+    public void refreshListPengemudi() throws Exception{
+        serial = new Serial(file_pengemudi);
+        
+        daftarPengemudi = (List<Pengemudi>)serial.readObject();
+    }
+    
+    public void refreshListPelanggan() throws Exception{
+        serial = new Serial(file_pelanggan);
+        
+        daftarPelanggan = (List<Pelanggan>)serial.readObject();
+    }
+    
+    public void MainMenu() throws Exception{
         boolean jalan = true;
         boolean jl = true;
         boolean pengemudi,pelanggan;
@@ -270,6 +293,9 @@ public class Console {
         long jon;
         
         while(jalan){
+           refreshListPelanggan();
+           refreshListPengemudi();
+            
            System.out.println("Selamat datang di aplikasi transportasi online");
            System.out.println("1. Login");
            System.out.println("2. Daftar");

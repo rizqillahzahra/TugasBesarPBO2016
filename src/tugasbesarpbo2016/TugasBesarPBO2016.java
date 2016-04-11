@@ -5,6 +5,8 @@
  */
 package tugasbesarpbo2016;
 
+import Model.Koneksi;
+
 /**
  *
  * @author Hafidh Fikri Rasyid
@@ -15,7 +17,8 @@ public class TugasBesarPBO2016 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        //Koneksi conn = new Koneksi();
+        //conn.bikinKoneksi();
     }
     
 }
