@@ -5,6 +5,9 @@
  */
 package View;
 
+import java.awt.event.ActionListener;
+import javax.swing.JButton;
+
 /**
  *
  * @author BOSS-PC
@@ -27,33 +30,21 @@ public class menu1 extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
+        btnsignup = new javax.swing.JButton();
+        btnlogin = new javax.swing.JButton();
+        btnlogin_driver = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
-
-        jButton1.setFont(new java.awt.Font("Hobo Std", 0, 18)); // NOI18N
-        jButton1.setText("sign up");
-
-        jButton2.setFont(new java.awt.Font("Hobo Std", 0, 14)); // NOI18N
-        jButton2.setText("log in");
-
-        jButton3.setFont(new java.awt.Font("Hobo Std", 0, 11)); // NOI18N
-        jButton3.setText("log in for driver");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jButton4.setFont(new java.awt.Font("Hobo Std", 0, 18)); // NOI18N
-        jButton4.setText("sign up");
+        btnsignup.setFont(new java.awt.Font("Hobo Std", 0, 18)); // NOI18N
+        btnsignup.setText("sign up");
 
-        jButton5.setFont(new java.awt.Font("Hobo Std", 0, 14)); // NOI18N
-        jButton5.setText("log in");
+        btnlogin.setFont(new java.awt.Font("Hobo Std", 0, 14)); // NOI18N
+        btnlogin.setText("log in");
 
-        jButton6.setFont(new java.awt.Font("Hobo Std", 0, 11)); // NOI18N
-        jButton6.setText("log in for driver");
+        btnlogin_driver.setFont(new java.awt.Font("Hobo Std", 0, 11)); // NOI18N
+        btnlogin_driver.setText("log in for driver");
 
         jLabel1.setFont(new java.awt.Font("Hobo Std", 0, 24)); // NOI18N
         jLabel1.setText("TRANSPORTASI ONLINE");
@@ -72,10 +63,10 @@ public class menu1 extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                    .addComponent(jButton5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jButton6))
+                                    .addComponent(btnlogin, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(btnlogin_driver))
                                 .addGap(20, 20, 20))
-                            .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(btnsignup, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(87, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -84,11 +75,11 @@ public class menu1 extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jLabel1)
                 .addGap(44, 44, 44)
-                .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnsignup, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnlogin, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jButton6)
+                .addComponent(btnlogin_driver)
                 .addContainerGap(76, Short.MAX_VALUE))
         );
 
@@ -131,12 +122,27 @@ public class menu1 extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
+    private javax.swing.JButton btnlogin;
+    private javax.swing.JButton btnlogin_driver;
+    private javax.swing.JButton btnsignup;
     private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
+
+    public JButton getLogin() {
+        return btnlogin;
+    }
+
+    public JButton getLogin_driver() {
+        return btnlogin_driver;
+    }
+
+    public JButton getSignup() {
+        return btnsignup;
+    }
+    public void addListener(ActionListener e){
+       btnlogin.addActionListener(e);
+       btnlogin_driver.addActionListener(e);
+       btnsignup.addActionListener(e);
+    }
+                                                             
 }

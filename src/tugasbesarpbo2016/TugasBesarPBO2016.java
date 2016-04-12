@@ -5,20 +5,13 @@
  */
 package tugasbesarpbo2016;
 
+import Controller.Menu1Controller;
 import Model.Koneksi;
-
-/**
- *
- * @author Hafidh Fikri Rasyid
- */
+import View.signin;
 public class TugasBesarPBO2016 {
-
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
-        //Koneksi conn = new Koneksi();
-        //conn.bikinKoneksi();
+        Menu1Controller m1 = new Menu1Controller();
+        
     }
     
 }
