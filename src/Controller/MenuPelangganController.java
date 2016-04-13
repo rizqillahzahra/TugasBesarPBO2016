@@ -15,22 +15,28 @@ import javax.swing.JButton;
  * @author Hafidh Fikri Rasyid
  */
 public class MenuPelangganController implements ActionListener {
-    private MenuPelanggan menPelView;
+    MenuPelanggan menPelView;
 
     public MenuPelangganController() {
         menPelView = new MenuPelanggan();
         menPelView.setVisible(true);
+        menPelView.addListener(this);
     }
 
     @Override
-    public void actionPerformed(ActionEvent e) {
-        Object event = e.getSource();
-        if(event == menPelView.getPickUpButton()){
+    public void actionPerformed(ActionEvent ae) {
+        Object e = ae.getSource();
+        if(e == menPelView.getBtnPickUp()){
             System.out.println("Buka menu pickup");
-        }else if(event == menPelView.getCourierButton()){
+            new Order_TransportasiController();
+        }else if(e == menPelView.getBtnCourier()){
             System.out.println("Buka menu Kurir");
-        }else if(event == menPelView.getLogOutButton()){
+            new Order_CourierController();
+            menPelView.dispose();
+        }else if(e == menPelView.getBtnLogOut()){
             System.out.println("Buka halaman login");
+            new Menu1Controller();
+            menPelView.dispose();
         }
     }
     

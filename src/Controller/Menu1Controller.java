@@ -25,16 +25,16 @@ public class Menu1Controller implements ActionListener {
             new signinController();
             m1.dispose();
         }
-        /*else if (e == m1.getSignup())
+        else if (e == m1.getSignup())
         {
             System.out.println("Proses Sign Up Pelanggan");
             new signupController();
             m1.dispose();
-        }*/
+        }
         else if (e == m1.getLogin_driver())
         {
             System.out.println("Proses Log In Pengemudi");
-            new MenuPengemudiController();
+            new sign_pengemudiController();
             m1.dispose();
         }
         

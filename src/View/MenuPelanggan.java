@@ -5,6 +5,9 @@
  */
 package View;
 
+import java.awt.event.ActionListener;
+import javax.swing.JButton;
+
 /**
  *
  * @author Hafidh Fikri Rasyid
@@ -27,26 +30,26 @@ public class MenuPelanggan extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        CourierButton = new javax.swing.JButton();
-        PickUpButton = new javax.swing.JButton();
-        LogOutButton = new javax.swing.JButton();
+        btnCourier = new javax.swing.JButton();
+        btnPickUp = new javax.swing.JButton();
+        btnLogOut = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        CourierButton.setFont(new java.awt.Font("Hobo Std", 0, 11)); // NOI18N
-        CourierButton.setText("Courier");
+        btnCourier.setFont(new java.awt.Font("Hobo Std", 0, 11)); // NOI18N
+        btnCourier.setText("Courier");
 
-        PickUpButton.setFont(new java.awt.Font("Hobo Std", 0, 11)); // NOI18N
-        PickUpButton.setText("Pick Up");
-        PickUpButton.addActionListener(new java.awt.event.ActionListener() {
+        btnPickUp.setFont(new java.awt.Font("Hobo Std", 0, 11)); // NOI18N
+        btnPickUp.setText("Pick Up");
+        btnPickUp.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                PickUpButtonActionPerformed(evt);
+                btnPickUpActionPerformed(evt);
             }
         });
 
-        LogOutButton.setFont(new java.awt.Font("Hobo Std", 0, 11)); // NOI18N
-        LogOutButton.setText("Log Out");
+        btnLogOut.setFont(new java.awt.Font("Hobo Std", 0, 11)); // NOI18N
+        btnLogOut.setText("Log Out");
 
         jLabel1.setFont(new java.awt.Font("Hobo Std", 0, 24)); // NOI18N
         jLabel1.setText("TRANSPORTASI ONLINE");
@@ -63,11 +66,11 @@ public class MenuPelanggan extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(139, 139, 139)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(PickUpButton, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(CourierButton, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(btnPickUp, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnCourier, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(158, 158, 158)
-                        .addComponent(LogOutButton)))
+                        .addComponent(btnLogOut)))
                 .addContainerGap(54, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -76,20 +79,20 @@ public class MenuPelanggan extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 55, Short.MAX_VALUE)
-                .addComponent(PickUpButton, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnPickUp, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(CourierButton, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnCourier, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(26, 26, 26)
-                .addComponent(LogOutButton)
+                .addComponent(btnLogOut)
                 .addGap(64, 64, 64))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void PickUpButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PickUpButtonActionPerformed
+    private void btnPickUpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPickUpActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_PickUpButtonActionPerformed
+    }//GEN-LAST:event_btnPickUpActionPerformed
 
     /**
      * @param args the command line arguments
@@ -128,30 +131,28 @@ public class MenuPelanggan extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton CourierButton;
-    private javax.swing.JButton LogOutButton;
-    private javax.swing.JButton PickUpButton;
+    private javax.swing.JButton btnCourier;
+    private javax.swing.JButton btnLogOut;
+    private javax.swing.JButton btnPickUp;
     private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 
-    /**
-     * @return the CourierButton
-     */
-    public javax.swing.JButton getCourierButton() {
-        return CourierButton;
+    public JButton getBtnCourier() {
+        return btnCourier;
     }
 
-    /**
-     * @return the LogOutButton
-     */
-    public javax.swing.JButton getLogOutButton() {
-        return LogOutButton;
+    public JButton getBtnLogOut() {
+        return btnLogOut;
     }
 
-    /**
-     * @return the PickUpButton
-     */
-    public javax.swing.JButton getPickUpButton() {
-        return PickUpButton;
+    public JButton getBtnPickUp() {
+        return btnPickUp;
     }
+    public void addListener(ActionListener e)
+    {
+        btnPickUp.addActionListener(e);
+        btnCourier.addActionListener(e);
+        btnLogOut.addActionListener(e);
+    }
+    
 }
