@@ -8,6 +8,8 @@ package Controller;
 import View.MenuPengemudi;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import javax.swing.JOptionPane;
+import javax.swing.JPopupMenu;
 
 /**
  *
@@ -19,11 +21,29 @@ public class MenuPengemudiController implements ActionListener {
     public MenuPengemudiController() {
         viMenPe = new MenuPengemudi();
         viMenPe.setVisible(true);
+        viMenPe.addListener(this);
     }
 
     @Override
-    public void actionPerformed(ActionEvent e) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public void actionPerformed(ActionEvent ae) {
+        Object e = ae.getSource();
+        if (e == viMenPe.getBtnTakeOrder())
+        {   
+            if (viMenPe.getTxtinputid().getText().isEmpty())
+            {
+                JOptionPane.showMessageDialog(viMenPe,"Masukan ID pesanan !!!");
+            }
+            else{
+                new price_pengemudiController();
+                viMenPe.dispose();
+            }
+
+        }
+        else if (e == viMenPe.getBtnLogout())
+        {
+            new Menu1Controller();
+            viMenPe.dispose();
+        }
     }
     
 }

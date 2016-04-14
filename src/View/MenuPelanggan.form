@@ -32,13 +32,13 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="139" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="1" attributes="0">
-                          <Component id="PickUpButton" min="-2" pref="115" max="-2" attributes="0"/>
-                          <Component id="CourierButton" min="-2" pref="115" max="-2" attributes="0"/>
+                          <Component id="btnPickUp" min="-2" pref="115" max="-2" attributes="0"/>
+                          <Component id="btnCourier" min="-2" pref="115" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="158" max="-2" attributes="0"/>
-                      <Component id="LogOutButton" min="-2" max="-2" attributes="0"/>
+                      <Component id="btnLogOut" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace pref="54" max="32767" attributes="0"/>
@@ -51,18 +51,18 @@
               <EmptySpace max="-2" attributes="0"/>
               <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
               <EmptySpace pref="55" max="32767" attributes="0"/>
-              <Component id="PickUpButton" min="-2" pref="38" max="-2" attributes="0"/>
+              <Component id="btnPickUp" min="-2" pref="38" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Component id="CourierButton" min="-2" pref="38" max="-2" attributes="0"/>
+              <Component id="btnCourier" min="-2" pref="38" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
-              <Component id="LogOutButton" min="-2" max="-2" attributes="0"/>
+              <Component id="btnLogOut" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="64" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Component class="javax.swing.JButton" name="CourierButton">
+    <Component class="javax.swing.JButton" name="btnCourier">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Hobo Std" size="11" style="0"/>
@@ -70,7 +70,7 @@
         <Property name="text" type="java.lang.String" value="Courier"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="PickUpButton">
+    <Component class="javax.swing.JButton" name="btnPickUp">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Hobo Std" size="11" style="0"/>
@@ -78,10 +78,10 @@
         <Property name="text" type="java.lang.String" value="Pick Up"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="PickUpButtonActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnPickUpActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="LogOutButton">
+    <Component class="javax.swing.JButton" name="btnLogOut">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Hobo Std" size="11" style="0"/>
