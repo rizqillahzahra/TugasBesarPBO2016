@@ -6,6 +6,7 @@
 package View;
 
 import java.awt.event.ActionListener;
+import javax.swing.JTable;
 
 /**
  *
@@ -31,7 +32,7 @@ public class MenuPengemudi extends javax.swing.JFrame {
 
         jLabel1 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        tblOrder = new javax.swing.JTable();
         txtinputid = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
         btnTakeOrder = new javax.swing.JButton();
@@ -42,7 +43,7 @@ public class MenuPengemudi extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Hobo Std", 0, 24)); // NOI18N
         jLabel1.setText("TRANSPORTASI ONLINE");
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        tblOrder.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null},
                 {null, null, null, null, null, null},
@@ -54,7 +55,7 @@ public class MenuPengemudi extends javax.swing.JFrame {
                 "ID", "Category", "Origin", "Destination", "Phone Number", "Status"
             }
         ));
-        jScrollPane1.setViewportView(jTable1);
+        jScrollPane1.setViewportView(tblOrder);
 
         jLabel2.setFont(new java.awt.Font("Hobo Std", 0, 11)); // NOI18N
         jLabel2.setText("input id :");
@@ -155,7 +156,7 @@ public class MenuPengemudi extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
+    private javax.swing.JTable tblOrder;
     private javax.swing.JTextField txtinputid;
     // End of variables declaration//GEN-END:variables
 
@@ -185,5 +186,15 @@ public class MenuPengemudi extends javax.swing.JFrame {
     public javax.swing.JTextField getTxtinputid() {
         return txtinputid;
     }
+
+    public JTable getTblOrder() {
+        return tblOrder;
+    }
+
+    public void setTblOrder(JTable tblOrder) {
+        this.tblOrder = tblOrder;
+    }
+    
+    
     
 }

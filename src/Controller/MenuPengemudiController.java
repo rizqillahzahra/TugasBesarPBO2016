@@ -8,20 +8,43 @@ package Controller;
 import View.MenuPengemudi;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.JPopupMenu;
+import javax.swing.JTable;
+import tugasbesarpbo2016.Pengemudi;
 
 /**
  *
  * @author Hafidh Fikri Rasyid
  */
-public class MenuPengemudiController implements ActionListener {
+public class MenuPengemudiController extends JTable implements ActionListener {
     MenuPengemudi viMenPe;
+    private Pengemudi pe;
+    JTable tabel;
 
-    public MenuPengemudiController() {
+    public MenuPengemudiController(Pengemudi p) {
         viMenPe = new MenuPengemudi();
         viMenPe.setVisible(true);
         viMenPe.addListener(this);
+        
+        pe = p;
+        
+        Object tes[][] = {{"a","a","a","a","a","a"},
+            {"a","a","a","a","a","a"},
+        };
+        
+        String judulKolom[] = {
+            "Nomor Pesanan",
+            "Category",
+            "Origin",
+            "Destination",
+            "Phone Number",
+            "Status"
+        };
+        
+        tabel = new JTable(tes, judulKolom);
+        viMenPe.setTblOrder(tabel);
     }
 
     @Override
@@ -34,7 +57,7 @@ public class MenuPengemudiController implements ActionListener {
                 JOptionPane.showMessageDialog(viMenPe,"Masukan ID pesanan !!!");
             }
             else{
-                new price_pengemudiController();
+                new price_pengemudiController(pe);
                 viMenPe.dispose();
             }
 

@@ -1,17 +1,22 @@
 package Controller;
 
+import Model.PesananModel;
 import View.Order_Transportasi;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JOptionPane;
+import tugasbesarpbo2016.Pelanggan;
 
 public class Order_TransportasiController implements ActionListener{
     Order_Transportasi ot;
+    private PesananModel pm;
+    private Pelanggan p;
 
-    public Order_TransportasiController() {
+    public Order_TransportasiController(Pelanggan p) {
         ot = new Order_Transportasi();
         ot.setVisible(true);
         ot.addListener(this);
+        this.p = p;
     }
 
     
@@ -28,7 +33,7 @@ public class Order_TransportasiController implements ActionListener{
             System.out.println("Loading...");
             if (ot.getTxtFrom().getText().equals("Dago") && ot.getTxtTo().getText().equals("Riau"))
             {
-                new price_transportController(ot.getTxtFrom().getText(),ot.getTxtTo().getText(),15);
+                new price_transportController(ot.getTxtFrom().getText(),ot.getTxtTo().getText(),15,this.p);
                 
             }
             ot.dispose();
@@ -37,7 +42,7 @@ public class Order_TransportasiController implements ActionListener{
         else if(e == ot.getBtnBack())
         {
             System.out.println("Back");
-            new MenuPelangganController();
+            new MenuPelangganController(p);
             ot.dispose();
         }
     }

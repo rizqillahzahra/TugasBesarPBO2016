@@ -13,6 +13,7 @@ public class Pesanan {
     private long id_pesanan;
     private int tarif;
     private String alamat_tujuan;
+    private String alamat_asal;
     private String Status;
     private int jarak;
     private int jenis;
@@ -22,6 +23,13 @@ public class Pesanan {
         this.alamat_tujuan = alamat_tujuan;
         this.Status = Status;
         this.id_pesanan = id_pesanan;
+    }
+    
+     public Pesanan(String alamat_tujuan,String alamat_asal, String Status, int jarak){
+        this.alamat_tujuan = alamat_tujuan;
+        this.alamat_asal = alamat_asal;
+        this.Status = Status;
+        this.jarak = jarak;
     }
         
     public void createTarif(int jenis) {
@@ -75,6 +83,14 @@ public class Pesanan {
 
     public void setJarak(int jarak) {
         this.jarak = jarak;
+    }
+
+    public void setAlamat_asal(String alamat_asal) {
+        this.alamat_asal = alamat_asal;
+    }
+
+    public String getAlamat_asal() {
+        return alamat_asal;
     }
     
     public String toString(){

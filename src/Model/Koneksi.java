@@ -28,7 +28,7 @@ public class Koneksi {
         }
         //buat objek koneksi
         try{
-            this.conn = DriverManager.getConnection("jdbc:mysql://213.52.130.99:2083/mechajun_transportasi_online","mechajun_PBO","tubespbo3810");
+            this.conn = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/db_transportasi_online","root","");
             
         }catch(SQLException e){
             System.err.println("Koneksi gagal !!!!");
@@ -42,5 +42,9 @@ public class Koneksi {
         } catch (SQLException ex) {
             System.err.println("tidak ada koneksi yang terbuka");
         }
+    }
+
+    public Connection getConn() {
+        return conn;
     }
 }
