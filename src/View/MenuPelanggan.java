@@ -37,10 +37,10 @@ public class MenuPelanggan extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        btnCourier.setFont(new java.awt.Font("Hobo Std", 0, 11)); // NOI18N
+        btnCourier.setFont(new java.awt.Font("Hobo Std", 0, 18)); // NOI18N
         btnCourier.setText("Courier");
 
-        btnPickUp.setFont(new java.awt.Font("Hobo Std", 0, 11)); // NOI18N
+        btnPickUp.setFont(new java.awt.Font("Hobo Std", 0, 18)); // NOI18N
         btnPickUp.setText("Pick Up");
         btnPickUp.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -48,7 +48,7 @@ public class MenuPelanggan extends javax.swing.JFrame {
             }
         });
 
-        btnLogOut.setFont(new java.awt.Font("Hobo Std", 0, 11)); // NOI18N
+        btnLogOut.setFont(new java.awt.Font("Hobo Std", 0, 14)); // NOI18N
         btnLogOut.setText("Log Out");
 
         jLabel1.setFont(new java.awt.Font("Hobo Std", 0, 24)); // NOI18N
@@ -61,24 +61,24 @@ public class MenuPelanggan extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(70, 70, 70)
-                        .addComponent(jLabel1))
-                    .addGroup(layout.createSequentialGroup()
                         .addGap(139, 139, 139)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(btnPickUp, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(btnCourier, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(158, 158, 158)
-                        .addComponent(btnLogOut)))
-                .addContainerGap(54, Short.MAX_VALUE))
+                        .addComponent(btnLogOut))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(58, 58, 58)
+                        .addComponent(jLabel1)))
+                .addContainerGap(66, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(29, 29, 29)
                 .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 55, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 33, Short.MAX_VALUE)
                 .addComponent(btnPickUp, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(btnCourier, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
